@@ -1,1 +1,4 @@
-<p>home-page works!</p>
+<input type="text" />
+@for (note of noteStoreService.getAll(); track note.id) {
+<a>{{ note.title }}</a>
+}
