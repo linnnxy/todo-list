@@ -1,4 +1,4 @@
-<input type="text" />
+<input #titleInput type="text" (keydown.enter)="noteStoreService.createOne(titleInput.value);titleInput.value=''" />
 @for (note of noteStoreService.getAll(); track note.id) {
-<a>{{ note.title }}</a>
+<a routerLink="/notes/{{note.id}}">{{ note.title }}</a>
 }
